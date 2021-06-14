@@ -1,0 +1,29 @@
+﻿@model WeatherForecast.Models.WeatherViewModel
+
+@{
+    ViewData["Title"] = $"Weather forecast - {Model.LocationName}";
+}
+
+<h1>@Model.LocationName, @Model.ParentLocationName</h1>
+<p>Updated at @Model.DateUpdated</p>
+
+<div id="weatherLocationspartial">
+
+</div>
+
+<button class="btn btn-primary" onclick="UpdateForecast(@Model.Woeid)">Refresh</button>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $.get("weather/getweatherforecast", {woeid: @Model.Woeid }, function (data) {
+            $("#weatherLocationspartial").html(data);
+        });
+    });
+
+    function UpdateForecast(woeid) {
+        $.get("weather/getweatherforecast", { woeid }, function (data) {
+            $("#weatherLocationspartial").html(data);
+        });
+    };
+</script>
