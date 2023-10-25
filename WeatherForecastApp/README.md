@@ -11,12 +11,6 @@ To run this project, you need to have the following software installed:
 
 Also, for local debugging, set the ASPNETCORE_ENVIRONMENT environment variable to 'Development'.
 
-## System Architecture
-
-![System Architecture](./docs/images/system_architecture.png)
-
-The system architecture diagram above illustrates the main components of the WeatherForecast application and their interactions. The application is built using ASP.NET Core and uses Entity Framework Core for data access. The user interface is built using Razor Pages. The application communicates with a SQL Server database for data storage. The application also interacts with an external weather API to fetch weather forecasts.
-
 ## Setup
 
 1. Clone this repository.
@@ -31,6 +25,17 @@ To use the application:
 1. Create an account by navigating to the registration page.
 2. Log in using your account credentials.
 3. Use the weather forecast feature to get weather forecasts.
+
+## Code Convention and Styling Rules
+
+This project uses StyleCop for enforcing style and consistency rules for C# code. StyleCop.Analyzers has been added as a NuGet package in the project and it will automatically check the code for style violations during build.
+
+To install and use StyleCop:
+
+1. StyleCop is already included in the project as a NuGet package. It does not require separate installation.
+2. StyleCop will automatically check your code for style violations when you build the project.
+
+The rules enforced by StyleCop can be configured by modifying the stylecop.json file in the project root.
 
 ## Contributing
 
