@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Weather() {
   const [weatherData, setWeatherData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('weather/getweatherforecast')
-      .then(response => {
-        setWeatherData(response.data);
-        setIsLoading(false);
-      });
+    axios.get("weather/getweatherforecast").then((response) => {
+      setWeatherData(response.data);
+      setIsLoading(false);
+    });
   }, []);
 
   if (isLoading) {
@@ -33,10 +32,12 @@ function Weather() {
         </tr>
       </thead>
       <tbody>
-        {weatherData.map(item => (
+        {weatherData.map((item) => (
           <tr key={item.id}>
             <td>{item.weatherStateName}</td>
-            <td><img src={item.imageUrl} alt={item.weatherStateName} /></td>
+            <td>
+              <img src={item.imageUrl} alt={item.weatherStateName} />
+            </td>
             <td>{item.dateUpdated}</td>
             <td>{item.applicableDate}</td>
             <td>{item.minTemp}</td>
