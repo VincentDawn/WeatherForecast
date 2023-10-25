@@ -1,12 +1,12 @@
 # WeatherForecast
 
-WeatherForecast is a web application that allows users to get weather forecasts. The application is built using ASP.NET Core, Entity Framework Core, and Razor Pages.
+WeatherForecast is a web application that allows users to get weather forecasts. The application is built using ASP.NET Core 5.0, Entity Framework Core 5.0, and Razor Pages.
 
 ## Prerequisites
 
 To run this project, you need to have the following software installed:
 
-- .NET Core
+- .NET Core 5.0
 - SQL Server
 
 Also, for local debugging, set the ASPNETCORE_ENVIRONMENT environment variable to 'Development'.
@@ -14,7 +14,7 @@ Also, for local debugging, set the ASPNETCORE_ENVIRONMENT environment variable t
 ## Setup
 
 1. Clone this repository.
-2. Install .NET Core and SQL Server.
+2. Install .NET Core 5.0 and SQL Server.
 3. Set up the database by running Entity Framework migrations. This can be done by running the 'dotnet ef database update' command in the terminal.
 4. Run the application using the 'dotnet run' command.
 
