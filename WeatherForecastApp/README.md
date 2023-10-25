@@ -11,6 +11,12 @@ To run this project, you need to have the following software installed:
 
 Also, for local debugging, set the ASPNETCORE_ENVIRONMENT environment variable to 'Development'.
 
+## System Architecture
+
+![System Architecture](./docs/images/system_architecture.png)
+
+The system architecture diagram above illustrates the main components of the WeatherForecast application and their interactions. The application is built using ASP.NET Core and uses Entity Framework Core for data access. The user interface is built using Razor Pages. The application communicates with a SQL Server database for data storage. The application also interacts with an external weather API to fetch weather forecasts.
+
 ## Setup
 
 1. Clone this repository.
